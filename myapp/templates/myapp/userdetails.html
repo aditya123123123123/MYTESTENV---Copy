@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Django Contact Fourm</title>
+        {% if messages %}
+            {% for message in messages %}
+
+            <script>
+                alert("{{ message }}");
+            </script>
+            {% endfor %}
+            {% endif %}
+        
+        
+    </head>
+    <body>
+        <form method="POST" class="post-fourm" action="#">
+        {% csrf_token %}
+        <div class="container">
+
+
+
+            <label for="firstName"> First Name </label>
+
+
+            <input type="text" name="firstName" value=''/> </br>
+
+            <label for="lastName">Last Name</label>
+ 
+            <input type="text" name="lastName" value=""/> </br>
+
+
+            <label for="email">Email</label>
+            <input type="text" name="email" value=""/> </br>
+
+            <label for="phone" >Phone</label>
+
+            <input type="text" name="phone" value=""/> </br>
+
+
+            <button type="submit" class="btn btn-default">Submit</button> </br>
+        </div>
+        </form>
+    </body>
+</HTML>
