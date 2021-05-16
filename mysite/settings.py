@@ -25,7 +25,7 @@ SECRET_KEY = 'b)n5x4up-w3^lo+l#sh5x#m67^a-tda6%0j@9vnc!qbxqo1uz+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','ajsdf.com']
+ALLOWED_HOSTS = ['127.0.0.1','mygooddjangoapp.herokuapp.com']
 
 
 # Application definition
@@ -129,4 +129,4 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 #STATICFILES_DIRS = (os.path.join(BASE_DIR,'static'),)
-LOGIN_REDIRECT_URL = '/accounts/dashboard/'
+LOGIN_REDIRECT_URL = '/accounts/dashboard/' 
