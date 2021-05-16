@@ -12,6 +12,14 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+
+
+####because of compatibilty issues
+from django.db.backends.mysql.base import DatabaseWrapper
+DatabaseWrapper.data_types['DateTimeField'] = 'datetime' # fix for MySQL 5.5
+#####
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -25,7 +33,7 @@ SECRET_KEY = 'b)n5x4up-w3^lo+l#sh5x#m67^a-tda6%0j@9vnc!qbxqo1uz+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','mygooddjangoapp.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','mygooddjangoapp.herokuapp.com','sql5.freemysqlhosting.net','ec2-52-8-112-233.us-west-1.compute.amazonaws.com']
 
 
 # Application definition
@@ -80,11 +88,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'school',
-        'USER': 'root',
-        'PASSWORD': 'Adityaj21!',
-        'HOST': 'localhost',   
+        'NAME': 'sql5412845',
+        'USER': 'sql5412845',
+        'PASSWORD': 'bhhD3dtdZ7',
+        'HOST': 'sql5.freemysqlhosting.net',   
         'PORT': '3306',
+        'OPTIONS': {
+            'init_command':"SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+
     }    
 }
 
