@@ -71,3 +71,5 @@ def showteacherdetails(request):
     return render(request,'myapp/showTeacherDetails.html',context)
 
 
+def YASH(request):
+    return render(request,'myapp/FORYASH.html')
