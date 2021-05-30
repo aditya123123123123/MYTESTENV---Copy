@@ -18,9 +18,41 @@
             text-align: left;
             margin-bottom: 25px;
         }
-        .form control label {
+        .form-control label {
             display:block;
             margin-bottom:10px;
+
+
+        }
+
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #7777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding:10px;
+            display:block;
+            width:95%;
+
+
+        }
+        .form-control input[type="radio"] {
+            display: inline-block;
+            width: auto;
+
+        }
+
+        button {
+            background-color: green;
+            border:1px solid #7777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size:21px;
+            display:block;
+            width:100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
 
         }
 
@@ -35,17 +67,58 @@
 <form method="POST" class="post-form" action="#">
     <div class="containter">
         <div class="form-control">
-            <label for="name">Name</label><br>
+            <label for="name">Name</label>
 
-            <input type="text" name="name" value="Yash Bahiahi SUCkS BOTT"><br>
-            
-            <label for="Valorant">ARE YOU GOOD AT VALORANT</label><br>
-            <input type="text" name="VAlorant" value="NO YOU ARE TERRIBLE DO SOMETHING GOOD WITH UR LIFE BOT"><br>
-            
-            
-
-
+            <input type="text" name="name" value="Yash Bahiahi SUCkS BOTT">
         </div>
+
+        <div class="form-control">
+            <label for="Valorant">ARE YOU GOOD AT VALORANT</label>
+            <input type="text" name="VAlorant" value="NO YOU ARE TERRIBLE DO SOMETHING GOOD WITH UR LIFE BOT">
+            
+        </div>
+        <div class="form-control">
+
+            <label for="Your Life">Your Life</label>
+            <input type="radio" id="Sucks" name="A" value="Sucks">Sucks</input>
+            <input type="radio" id="Sucks" name="A" value="Sucks a lot">Sucks a lot</input>
+            <input type="radio" id="Sucks" name="A" value=" Is Terrible">Is Terrible</input>
+            <input type="radio" id="Sucks" name="A" value="All of the Above">All of the Above</input>
+            
+
+        </div>    
+            
+
+
+        
+        <div class="form control">
+            <label for="role" id="label-role">
+                What Do you Want to Become when you grow up
+            </label>
+        </div>
+        <div class="form-control">
+            <select name="recommend" id="recommend">
+                <option value="yes">A HEdGeHog  </option>
+                <option value="no">A NON profession Valorant player</option>
+                <option value="maybe"> A terd  </option>
+            </select>
+        </div>
+            
+        
+
+
+            <div class="form-control">
+                <label for="comment">Comment About this insane fourm</label>
+                <textarea name="comment" id="comment" placeholder="enter your non professional bot speech here">
+
+                </textarea>
+            </div>
+
+            <div class="form-control">
+                <button type="submit" class="btn btn-defalt">Submit Your garbge fourm</button>
+            
+            </div>
+        
         
     </div>
     
